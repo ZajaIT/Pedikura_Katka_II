@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pedikúra Katka | Rychvald</title>
+<meta name="description" content="Pedikúra Katka v Rychvaldu – přístrojová pedikúra, péče o zdravé nehty, ošetření kuřích ok a zarostlých nehtů, wellness procedury a relaxační péče.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   ZÁKLAD
+===================================================== */
+
+:root{
+    --rose:#d7b6a8;
+    --rose-dark:#b98575;
+    --pink:#d98991;
+    --beige:#f4ece6;
+    --cream:#fbf8f5;
+    --brown:#5a453d;
+    --brown-dark:#342824;
+    --white:#ffffff;
+    --line:#e6d7cf;
+    --container:1200px;
+    --header-h:82px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:var(--header-h);
+}
+
+body{
+    font-family:'DM Sans',sans-serif;
+    color:#000;
+    background:var(--white);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea{
+    font:inherit;
+}
+
+.container{
+    width:min(90%, var(--container));
+    margin:auto;
+}
+
+.section-label{
+    display:block;
+    margin-bottom:12px;
+    color:var(--rose-dark);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.section-title{
+    font-family:'Outfit',sans-serif;
+    font-size:clamp(38px,5vw,58px);
+    line-height:1.1;
+    font-weight:400;
+    color:var(--brown-dark);
+}
+
+.section-text{
+    margin-top:22px;
+    color:#705e56;
+    font-size:16px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:var(--header-h);
+    z-index:1000;
+    background:rgba(255,255,255,.95);
+    border-bottom:1px solid rgba(215,182,168,.35);
+    backdrop-filter:blur(12px);
+}
+
+.header-inner{
+    width:min(92%,1350px);
+    height:100%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    flex-direction:column;
+    line-height:1;
+}
+
+.logo-main{
+    font-family:'Playfair Display',serif;
+    font-size:26px;
+    font-weight:500;
+    color:var(--brown-dark);
+}
+
+.logo-small{
+    margin-top:6px;
+    font-size:9px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--rose-dark);
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:38px;
+}
+
+nav a{
+    position:relative;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:1px;
+    background:var(--rose-dark);
+    transition:.3s ease;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.hamburger{
+    display:none;
+    width:32px;
+    height:24px;
+    border:0;
+    background:none;
+    cursor:pointer;
+    position:relative;
+}
+
+.hamburger span{
+    position:absolute;
+    left:0;
+    width:100%;
+    height:1px;
+    background:var(--brown-dark);
+    transition:.3s;
+}
+
+.hamburger span:nth-child(1){top:3px;}
+.hamburger span:nth-child(2){top:11px;}
+.hamburger span:nth-child(3){top:19px;}
+
+.hamburger.active span:nth-child(1){
+    top:11px;
+    transform:rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+    top:11px;
+    transform:rotate(-45deg);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:100vh;
+    padding-top:var(--header-h);
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.22)),
+    url("hero.webp") center center / cover no-repeat;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:min(90%,850px);
+    padding:50px 30px;
+}
+
+.hero-eyebrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    margin-bottom:22px;
+    color:#000;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.hero-eyebrow::before,
+.hero-eyebrow::after{
+    content:"";
+    width:42px;
+    height:1px;
+    background:var(--rose-dark);
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(58px,8vw,100px);
+    line-height:.98;
+    font-weight:500;
+    color:var(--brown-dark);
+}
+
+.hero h1 span{
+    display:block;
+    margin-top:12px;
+    font-family:'DM Sans',sans-serif;
+    font-size:clamp(15px,2vw,19px);
+    line-height:1.5;
+    font-weight:400;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:#000;
+}
+
+.hero-text{
+    max-width:600px;
+    margin:28px auto 0;
+    font-size:17px;
+    color:#000;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    min-width:180px;
+    padding:15px 25px;
+    border:1px solid var(--brown-dark);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s ease;
+}
+
+.btn-dark{
+    color:#fff;
+    background:#a97465;
+    border-color:#a97465;
+}
+
+.btn-dark:hover{
+    background:var(--brown-dark);
+    border-color:var(--brown-dark);
+}
+
+.btn-light{
+    background:rgba(255,255,255,.65);
+}
+
+.btn-light:hover{
+    background:#fff;
+}
+
+
+/* =====================================================
+   TŘI HLAVNÍ BODY
+===================================================== */
+
+.values{
+    position:relative;
+    z-index:5;
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+}
+
+.values-inner{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.value{
+    min-height:190px;
+    padding:40px 25px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border-right:1px solid var(--line);
+}
+
+.value:last-child{
+    border-right:0;
+}
+
+.value-icon{
+    width:46px;
+    height:46px;
+    margin-bottom:18px;
+    color:var(--rose-dark);
+}
+
+.value-icon svg{
+    width:100%;
+    height:100%;
+    stroke:currentColor;
+    stroke-width:1.4;
+    fill:none;
+}
+
+.value h3{
+    font-family:'Playfair Display',serif;
+    font-size:21px;
+    font-weight:500;
+}
+
+.value p{
+    margin-top:7px;
+    font-size:13px;
+    color:#816f66;
+}
+
+
+/* =====================================================
+   O SALONU
+===================================================== */
+
+.about{
+    padding:120px 0;
+    background:#fff;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:90px;
+    align-items:center;
+}
+
+.about-image{
+    position:relative;
+    padding:18px 0 18px 18px;
+}
+
+.about-image img{
+    position:relative;
+    width:100%;
+    max-height:650px;
+    object-fit:cover;
+}
+   .about-image-mobile{
+    display:none;
+}
+
+.about-name{
+    margin-top:28px;
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+}
+
+.about-name span{
+    display:block;
+    margin-top:5px;
+    font-family:'DM Sans',sans-serif;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--rose-dark);
+}
+
+.about-highlight{
+    margin-top:35px;
+    padding:25px 28px;
+    border-left:2px solid var(--rose);
+    background:var(--cream);
+    color:#68564e;
+}
+
+
+/* =====================================================
+   SLUŽBY
+===================================================== */
+
+.services{
+    padding:120px 0;
+    background:#eadbd4;
+    border-top:1px solid #d7b6a8;
+    border-bottom:1px solid #d7b6a8;
+}
+
+.services-heading{
+    max-width:none;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.services-heading .section-text{
+    color:#000;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+}
+
+.service{
+    min-height:210px;
+    padding:28px 35px;
+    background:#fff;
+}
+
+.service-number{
+    display:block;
+    margin-bottom:25px;
+    font-family:'Playfair Display',serif;
+    font-size:15px;
+    color:var(--rose-dark);
+}
+
+.service h3{
+    margin-bottom:14px;
+    font-family:'Outfit',sans-serif;
+    font-size:25px;
+    line-height:1.25;
+    font-weight:400;
+}
+
+.service p{
+    color:#77645b;
+    font-size:14px;
+}
+
+
+/* =====================================================
+   INTERIÉR
+===================================================== */
+
+.salon{
+    padding:120px 0;
+    background:#fff;
+}
+
+.salon-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:80px;
+    align-items:center;
+}
+
+.salon-photo{
+    position:relative;
+}
+
+   .salon-photo-mobile{
+    display:none;
+}
+
+.salon-photo img{
+    width:85%;
+    max-height:560px;
+    object-fit:cover;
+    margin:0 auto;
+}
+
+.salon-list{
+    margin-top:32px;
+    display:grid;
+    gap:15px;
+}
+
+.salon-list div{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding-bottom:15px;
+    border-bottom:1px solid var(--line);
+    font-size:16px;
+}
+
+.salon-list span{
+    width:7px;
+    height:7px;
+    flex:0 0 7px;
+    border-radius:50%;
+    background:var(--rose-dark);
+}
+
+
+/* =====================================================
+   CENÍK
+===================================================== */
+
+.pricing{
+    padding:120px 0;
+    background:#eadbd4;
+    border-top:1px solid #cda99d;
+    border-bottom:1px solid #cda99d;
+}
+
+.pricing-head{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 65px;
+}
+
+.pricing-box{
+    max-width:950px;
+    margin:auto;
+    background:#fff;
+    border:1px solid #cda99d;
+}
+
+.price-category{
+    padding:42px 50px;
+    border-bottom:none;
+}
+
+.price-category + .price-category{
+    position:relative;
+}
+
+.price-category + .price-category::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50px;
+    right:50px;
+    border-top:1px solid #000;
+}
+
+
+
+.price-category h3{
+    margin-bottom:25px;
+    font-family:'Outfit',sans-serif;
+    font-size:28px;
+    font-weight:400;
+}
+
+.price-row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:30px;
+    padding:11px 0;
+    border-bottom:1px dotted #ddd0c9;
+}
+
+.price-row:last-child{
+    border-bottom:0;
+}
+
+.price-name{
+    font-size:14px;
+}
+
+.price{
+    font-weight:600;
+    white-space:nowrap;
+    color:var(--brown);
+}
+
+.price-description{
+    margin:0 0 18px;
+    color:#000;
+    font-size:14px;
+}
+
+.price-description span{
+    display:block;
+}
+
+
+
+/* =====================================================
+   POUKAZY
+===================================================== */
+
+.vouchers{
+    padding:120px 0;
+    background:#fff;
+}
+
+.voucher-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:90px;
+    align-items:center;
+}
+
+.voucher-photo{
+    padding:20px;
+    background:var(--beige);
+}
+   .voucher-photo-mobile{
+    display:none;
+}
+
+.voucher-photo img{
+    width:100%;
+    max-height:600px;
+    object-fit:contain;
+}
+
+.voucher-text{
+    max-width:520px;
+}
+
+.voucher-text .btn{
+    display:inline-block;
+    margin-top:32px;
+}
+
+
+/* =====================================================
+   INFORMACE
+===================================================== */
+
+.info-strip{
+    padding:70px 0;
+    background:var(--brown-dark);
+    color:#fff;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.info-item{
+    text-align:center;
+}
+
+.info-item strong{
+    display:block;
+    margin-bottom:8px;
+    font-family:'Playfair Display',serif;
+    font-size:21px;
+    font-weight:400;
+}
+
+.info-item span{
+    font-size:13px;
+    color:#d9cbc4;
+}
+
+
+/* =====================================================
+   STORNO
+===================================================== */
+
+.cancellation{
+    padding:80px 0;
+    background:var(--beige);
+}
+
+.cancellation-inner{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.cancellation h2{
+    margin-bottom:20px;
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    font-weight:500;
+}
+
+.cancellation p{
+    color:#705e56;
+    font-size:14px;
+}
+
+
+/* =====================================================
+   KONTAKT
+===================================================== */
+
+.contact{
+    padding:120px 0 0;
+    background:#fff;
+}
+
+.contact-head{
+    max-width:700px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.contact-head .section-text{
+    color:#000;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:360px;
+}
+
+.contact-details{
+    padding:30px 55px;
+    background:var(--cream);
+}
+
+.contact-item{
+    padding:12px 0;
+    border-bottom:1px solid #cda99d;
+}
+
+.contact-item:first-of-type{
+    margin-top:5px;
+}
+
+.contact-item small{
+    display:block;
+    margin-bottom:5px;
+    color:var(--rose-dark);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.contact-item small{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.contact-icon{
+    width:18px;
+    height:18px;
+    color:#b98575;
+    flex-shrink:0;
+}
+
+.contact-item a,
+.contact-item p{
+    font-size:16px;
+}
+
+.contact-item a:hover{
+    color:var(--rose-dark);
+}
+
+.contact-note{
+    margin-top:18px;
+    color:#78665d;
+    font-size:13px;
+}
+
+.map{
+    min-height:430px;
+}
+
+.map iframe{
+    display:block;
+    width:100%;
+    height:100%;
+    min-height:430px;
+    border:0;
+    filter:brightness(1.12) contrast(.92) saturate(.85);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    padding:35px 0;
+    background:var(--brown-dark);
+    color:#cdbeb7;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    font-size:11px;
+    letter-spacing:.5px;
+}
+
+.footer-brand{
+    color:#fff;
+    font-family:'Playfair Display',serif;
+    font-size:18px;
+}
+
+.footer-credit a{
+    transition:.3s;
+}
+
+.footer-credit a:hover{
+    color:var(--rose);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+    :root{
+        --header-h:72px;
+    }
+
+    .container{
+        width:min(88%,var(--container));
+    }
+
+    .hamburger{
+        display:block;
+        z-index:1002;
+    }
+
+    nav{
+        position:fixed;
+        top:var(--header-h);
+        left:0;
+        width:100%;
+        height:calc(100vh - var(--header-h));
+        padding:55px 25px;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        gap:22px;
+        background:rgba(251,248,245,.98);
+        transform:translateX(100%);
+        transition:.35s ease;
+    }
+
+    nav.active{
+        transform:translateX(0);
+    }
+
+   nav a{
+    font-family:'Outfit',sans-serif;
+    font-size:22px;
+    font-weight:400;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+    body.menu-open{
+        overflow:hidden;
+    }
+
+    .hero{
+        min-height:100svh;
+        background-position:center center;
+    }
+
+    .hero-content{
+        padding:35px 10px;
+    }
+
+    .hero h1{
+        font-size:clamp(52px,14vw,78px);
+    }
+
+    .hero h1 span{
+        margin-top:15px;
+        font-size:13px;
+        letter-spacing:3px;
+    }
+
+    .values-inner{
+        grid-template-columns:1fr;
+    }
+
+    .value{
+        min-height:auto;
+        padding:32px 20px;
+        border-right:0;
+        border-bottom:1px solid var(--line);
+    }
+
+    .value:last-child{
+        border-bottom:0;
+    }
+
+    .about,
+    .services,
+    .salon,
+    .pricing,
+    .vouchers,
+    .contact{
+        padding-top:85px;
+    }
+
+    .about{
+        padding-bottom:85px;
+    }
+
+    .about-grid,
+    .salon-grid,
+    .voucher-grid{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+   .about-image{
+    display:none;
+}
+
+.about-image-mobile{
+    display:block;
+    margin:35px auto 25px;
+}
+
+.about-image-mobile img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+   .about-content .section-title{
+    text-align:center;
+}
+   .about-content .section-text,
+.about-highlight{
+    text-align:center;
+}
+   .about-name{
+    text-align:center;
+}
+
+    .services{
+        padding-bottom:85px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .service{
+        min-height:200px;
+    }
+
+    .salon{
+        padding-bottom:90px;
+    }
+
+    .salon-grid{
+        display:flex;
+        flex-direction:column;
+    }
+
+   .salon-photo{
+    display:none;
+}
+
+.salon-photo-mobile{
+    display:block;
+    margin:30px auto 35px;
+}
+
+.salon-photo-mobile img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+    .pricing{
+        padding-bottom:85px;
+    }
+
+    .vouchers{
+        padding-bottom:85px;
+    }
+
+   .voucher-photo{
+    display:none;
+}
+
+.voucher-photo-mobile{
+    display:block;
+    margin:30px auto 0;
+    padding:12px;
+    background:var(--beige);
+}
+
+.voucher-photo-mobile img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+   .voucher-text{
+    text-align:center;
+}
+
+.voucher-text .section-text{
+    text-align:center;
+}
+   .voucher-text .btn{
+    display:block;
+    width:max-content;
+    margin:32px auto 0;
+}
+
+    .info-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-details{
+        padding:45px 7%;
+        text-align:center;
+    }
+
+.contact-item small{
+    justify-content:center;
+}
+
+.contact-note{
+    text-align:center;
+}
+
+    .map,
+    .map iframe{
+        min-height:420px;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .logo-main{
+        font-size:22px;
+    }
+
+    .logo-small{
+        font-size:8px;
+        letter-spacing:2px;
+    }
+
+    .hero-eyebrow{
+        gap:10px;
+        font-size:10px;
+        letter-spacing:2px;
+    }
+
+    .hero-eyebrow::before,
+    .hero-eyebrow::after{
+        width:25px;
+    }
+
+    .hero-text{
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:min(100%,280px);
+    }
+
+    .section-title{
+        font-size:40px;
+    }
+
+    .about-grid,
+    .salon-grid,
+    .voucher-grid{
+        gap:45px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service{
+        min-height:auto;
+        padding:35px 28px;
+    }
+
+    .price-category{
+        padding:35px 25px;
+    }
+
+   .price-category + .price-category::before{
+    left:25px;
+    right:25px;
+}
+
+   .price-category h3{
+    font-size:24px;
+}
+
+    .price-row{
+        grid-template-columns:1fr auto;
+        gap:15px;
+    }
+
+    .price-name{
+        font-size:13px;
+    }
+
+    .price{
+        font-size:13px;
+    }
+
+    .cancellation{
+        padding:65px 0;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        text-align:center;
+        gap:12px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="header-inner">
+
+        <a href="#domu" class="logo">
+            <span class="logo-main">Pedikúra Katka</span>
+            <span class="logo-small">Kateřina Sedlmajerová</span>
+        </a>
+
+        <nav id="nav">
+            <a href="#domu">Domů</a>
+            <a href="#omne">O mně</a>
+            <a href="#sluzby">Služby</a>
+            <a href="#salon">Salon</a>
+            <a href="#cenik">Ceník</a>
+            <a href="#poukazy">Poukazy</a>
+            <a href="#info">Info</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger" aria-label="Otevřít menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="domu">
+
+    <div class="hero-content">
+
+        <div class="hero-eyebrow">
+            Pedikúra & péče
+        </div>
+
+        <h1>
+            Pedikúra Katka
+            <span>Kateřina Sedlmajerová</span>
+        </h1>
+
+        <p class="hero-text">
+            Péče o vaše nohy v příjemném prostředí, kde je čas věnovaný pouze vám.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#kontakt" class="btn btn-dark">
+                Objednat se
+            </a>
+
+            <a href="#sluzby" class="btn btn-light">
+                Prohlédnout služby
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HODNOTY
+===================================================== -->
+
+<section class="values">
+
+    <div class="container values-inner">
+
+        <div class="value">
+
+            <div class="value-icon">
+                <svg viewBox="0 0 48 48">
+                    <path d="M24 4C18 13 11 20 11 29a13 13 0 0 0 26 0C37 20 30 13 24 4Z"/>
+                    <path d="M18 30c1 4 3 6 7 7"/>
+                </svg>
+            </div>
+
+            <h3>Hygiena na prvním místě</h3>
+            <p>Čistota a hygiena prostředí je prioritou salonu.</p>
+
+        </div>
+
+
+        <div class="value">
+
+            <div class="value-icon">
+                <svg viewBox="0 0 48 48">
+                    <path d="M24 5 30 17 43 19 33.5 28 36 41 24 35 12 41 14.5 28 5 19 18 17Z"/>
+                </svg>
+            </div>
+
+            <h3>Kvalitní péče</h3>
+            <p>Kvalita poskytovaných služeb je vždy na prvním místě.</p>
+
+        </div>
+
+
+        <div class="value">
+
+            <div class="value-icon">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="15" r="7"/>
+                    <path d="M10 42c1-10 6-16 14-16s13 6 14 16"/>
+                </svg>
+            </div>
+
+            <h3>Individuální přístup</h3>
+            <p>Vždy jeden klient a čas věnovaný pouze jeho péči.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     O SALONU / KATEŘINA
+===================================================== -->
+
+<section class="about" id="omne">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="katerina-sedlmajerova.webp"
+                alt="Kateřina Sedlmajerová - Pedikúra Katka"
+            >
+
+        </div>
+
+
+        <div class="about-content">
+
+
+            <h2 class="section-title">
+                Péče, při které máte čas jen pro sebe
+            </h2>
+
+            <p class="section-text">
+                U mě najdete to správné prostředí k odpočinku a relaxaci.
+                Načerpáte mnoho pozitivní energie od stresujícího hektického
+                života do dalších dní.
+            </p>
+
+            <div class="about-highlight">
+                Každému klientovi se věnuji individuálně. V salonu je vždy
+                objednaný pouze jeden člověk, takže máte během své návštěvy
+                klid a prostor jen pro sebe.
+            </div>
+
+           <div class="about-image-mobile">
+    <img
+        src="katerina-sedlmajerova.webp"
+        alt="Kateřina Sedlmajerová - Pedikúra Katka"
+    >
+</div>
+
+            <div class="about-name">
+                Kateřina Sedlmajerová
+                <span>Pedikúra Katka</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SLUŽBY
+===================================================== -->
+
+<section class="services" id="sluzby">
+
+    <div class="container">
+
+        <div class="services-heading">
+
+            <h2 class="section-title">
+                SLUŽBY
+            </h2>
+
+            <p class="section-text">
+                Nabízím široký výběr profesionálních ošetření a doplňkových služeb.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <div class="service">
+                <span class="service-number">01</span>
+                <h3>Přístrojová pedikúra</h3>
+                <p>
+                    Suché přístrojové ošetření chodidel, nehtů,
+                    nehtových valů, zrohovatělé kůže a otlaků.
+                </p>
+            </div>
+
+            <div class="service">
+                <span class="service-number">02</span>
+                <h3>Kuří oka a zarostlé nehty</h3>
+                <p>
+                    Ošetření kuřích ok podologickým přístrojem
+                    a péče o zarostlé nehty včetně tamponády.
+                </p>
+            </div>
+
+            <div class="service">
+                <span class="service-number">03</span>
+                <h3>Orthonyxie</h3>
+                <p>
+                    Nehtová rovnátka – nehtové špony pro korekci
+                    problematických nehtů.
+                </p>
+            </div>
+
+            <div class="service">
+                <span class="service-number">04</span>
+                <h3>Diabetická noha</h3>
+                <p>
+                    Ošetření diabetické nohy a odborné poradenství.
+                    Zdravotní pojišťovny mohou diabetikům na přístrojovou
+                    pedikúru přispívat dle druhu zdravotní pojišťovny.
+                </p>
+            </div>
+
+            <div class="service">
+                <span class="service-number">05</span>
+                <h3>Wellness péče</h3>
+                <p>
+                    Reflexní relaxační masáže, peeling a parafínové
+                    zábaly chodidel pro chvíle odpočinku a relaxace.
+                </p>
+            </div>
+
+            <div class="service">
+                <span class="service-number">06</span>
+                <h3>Péče o přírodní nehty</h3>
+                <p>
+                    Úprava zdravých přírodních nehtů a lakování.
+                    Bez gelové modeláže.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SALON
+===================================================== -->
+
+<section class="salon" id="salon">
+
+    <div class="container salon-grid">
+
+        <div class="salon-photo">
+
+            <img
+                src="interier.webp"
+                alt="Interiér salonu Pedikúra Katka v Rychvaldu"
+            >
+
+        </div>
+
+
+        <div class="salon-content">
+
+            <h2 class="section-title">
+                Místo pro péči i odpočinek
+            </h2>
+
+           <div class="salon-photo-mobile">
+    <img
+        src="interier.webp"
+        alt="Interiér salonu Pedikúra Katka v Rychvaldu"
+    >
+</div>
+
+            <div class="salon-list">
+
+                <div>
+                    <span></span>
+                    Bezbariérový přístup do salonu
+                </div>
+
+                <div>
+                    <span></span>
+                    Bezplatné parkování
+                </div>
+
+                <div>
+                    <span></span>
+                    Objednávky po telefonické domluvě
+                </div>
+
+                <div>
+                    <span></span>
+                    Kosmetika pro domácí péči
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CENÍK
+===================================================== -->
+
+<section class="pricing" id="cenik">
+
+    <div class="container">
+
+        <div class="pricing-head">
+
+            <h2 class="section-title">
+                CENÍK
+            </h2>
+
+        </div>
+
+
+        <div class="pricing-box">
+
+            <div class="price-category">
+
+                <h3>Přístrojová pedikúra</h3>
+
+                <p class="price-description">
+                    <u>Základní pedikúra:</u>
+                    <span>Dezinfekce chodidel</span>
+                    <span>Úprava zdravých nehtů a nehtových valů</span>
+                    <span>Odstranění zrohovatělé kůže a otlaků přístrojem</span>
+                    <span>Ošetření krémem</span>
+                    <span>Krátká masáž chodidel</span>
+                </p>
+
+                <div class="price-row">
+                    <span class="price-name">Přístrojová pedikúra / do 45 min.</span>
+                    <span class="price">650 Kč</span>
+                </div>
+
+            </div>
+
+
+           <div class="price-category">
+
+    <h3>Wellness pedikúra</h3>
+
+    <div class="price-row">
+        <span class="price-name">Základní pedikúra a procedury dle výběru</span>
+        <span class="price">od 1 050 Kč</span>
+    </div>
+
+</div>
+
+
+            <div class="price-category">
+
+                <h3>Doplňkové procedury</h3>
+
+                <div class="price-row">
+                    <span class="price-name">Ošetření kuřího oka podologickým přístrojem</span>
+                    <span class="price">200 Kč</span>
+                </div>
+
+                <div class="price-row">
+                    <span class="price-name">Ošetření zarostlého nehtu – tamponáda</span>
+                    <span class="price">150 Kč</span>
+                </div>
+
+                <div class="price-row">
+                    <span class="price-name">Nehtové rovnátko</span>
+                    <span class="price">600 Kč</span>
+                </div>
+
+                <div class="price-row">
+                    <span class="price-name">Lakování běžným lakem</span>
+                    <span class="price">150 Kč</span>
+                </div>
+
+                <div class="price-row">
+                    <span class="price-name">Peeling</span>
+                    <span class="price">120 Kč</span>
+                </div>
+
+                <div class="price-row">
+                    <span class="price-name">Parafínový zábal chodidel</span>
+                    <span class="price">220 Kč</span>
+                </div>
+
+                <div class="price-row">
+                    <span class="price-name">Reflexní relaxační masáž / 15 min.</span>
+                    <span class="price">220 Kč</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     POUKAZY
+===================================================== -->
+
+<section class="vouchers" id="poukazy">
+
+    <div class="container voucher-grid">
+
+        <div class="voucher-photo">
+
+            <img
+                src="poukaz.webp"
+                alt="Dárkový poukaz Pedikúra Katka"
+            >
+
+        </div>
+
+
+        <div class="voucher-text">
+
+            <span class="section-label">Darujte péči</span>
+
+            <h2 class="section-title">
+                Dárkové poukazy
+            </h2>
+
+            <p class="section-text">
+                Dopřejte svým blízkým chvíli péče, odpočinku a relaxace.
+                Informace o dárkových poukazech získáte telefonicky nebo přímo u mě v salonu.
+            </p>
+
+           <div class="voucher-photo-mobile">
+    <img
+        src="poukaz.webp"
+        alt="Dárkový poukaz Pedikúra Katka"
+    >
+</div>
+
+            <a href="#kontakt" class="btn btn-dark">
+                Objednat poukaz
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DŮLEŽITÉ INFORMACE
+===================================================== -->
+
+<section class="info-strip" id="info">
+
+    <div class="container info-grid">
+
+        <div class="info-item">
+            <strong>Bezbariérový přístup</strong>
+            <span>Pohodlný přístup přímo do salonu.</span>
+        </div>
+
+        <div class="info-item">
+            <strong>Bezplatné parkování</strong>
+            <span>Parkování je pro klienty zajištěno.</span>
+        </div>
+
+        <div class="info-item">
+            <strong>Na objednávku</strong>
+            <span>Návštěvy probíhají po předchozí telefonické domluvě.</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STORNO PODMÍNKY
+===================================================== -->
+
+<section class="cancellation">
+
+    <div class="container cancellation-inner">
+
+        <h2>Informace k objednanému termínu</h2>
+
+        <p>
+            Pokud se nemůžete dostavit na objednaný termín, podejte informaci
+            telefonicky nebo SMS do 24 hodin před objednanou procedurou,
+            v opačném případě Vám může být účtován storno poplatek ve výši
+            50 % z celkové ceny objednaných procedur.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     KONTAKT
+===================================================== -->
+
+<section class="contact" id="kontakt">
+
+    <div class="container">
+
+        <div class="contact-head">
+
+            <h2 class="section-title">
+                KONTAKT
+            </h2>
+
+            <p class="section-text">
+                Salón najdete na ulici Lutyňské 1889, Rychvald u Karviné - 
+                autobusová zastávka Orlová Lutyně Zátiší, pěšky po ulici K Rybníku,
+                dále pak ulice Lutyňská (celkem 900 m).
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-details">
+
+            <div class="contact-item">
+    <small>
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.6 2.8 9.3 2a1.5 1.5 0 0 1 1.8.9l1.2 3a1.5 1.5 0 0 1-.4 1.7L10.3 9a15 15 0 0 0 4.7 4.7l1.4-1.6a1.5 1.5 0 0 1 1.7-.4l3 1.2a1.5 1.5 0 0 1 .9 1.8l-.8 2.7a3 3 0 0 1-2.9 2.1C10.7 19.5 4.5 13.3 4.5 5.7a3 3 0 0 1 2.1-2.9Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+        </svg>
+        Telefon
+    </small>
+
+    <a href="tel:+420734332170">
+        +420 734 332 170
+    </a>
+</div>
+
+            <div class="contact-item">
+    <small>
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="1.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"/>
+            <path d="M4 7l8 6 8-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+        </svg>
+        E-mail
+    </small>
+
+    <a href="mailto:mobilpedi-katka@seznam.cz">
+        mobilpedi-katka@seznam.cz
+    </a>
+</div>
+
+            <div class="contact-item">
+    <small>
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+            <circle cx="12" cy="9" r="2.3"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"/>
+        </svg>
+        Adresa
+    </small>
+
+    <a href="https://maps.app.goo.gl/Y7bWr1qEtDxBs5EL8"
+       target="_blank"
+       rel="noopener">
+        Lutyňská 1889<br>
+        735 32 Rychvald
+    </a>
+</div>
+
+            <div class="contact-item">
+    <small>
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="8.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"/>
+            <path d="M12 7.5v5l3.5 2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+        </svg>
+        Otevírací doba
+    </small>
+
+    <p>Dle objednávek</p>
+</div>
+
+            <p class="contact-note">
+                Přístup do salonu je bezbariérový a bezplatné parkování
+                je zajištěno.
+            </p>
+
+        </div>
+
+
+        <div class="map">
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.6721891867205!2d18.399949675445164!3d49.86757212916209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713fdfad3b17ab3%3A0x763ff7b63c76ba4c!2sPEDIK%C3%9ARA%20KATKA%20Rychvald!5e1!3m2!1scs!2shr!4v1786631365710!5m2!1scs!2shr"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        title="PEDIKÚRA KATKA Rychvald – mapa">
+    </iframe>
+
+</div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+            <span class="footer-brand">Pedikúra Katka</span>
+        </div>
+
+        <div>
+            © <span id="year"></span> Kateřina Sedlmajerová
+        </div>
+
+        <div class="footer-credit">
+            Designed by
+            <a href="https://zajait.cz/" target="_blank" rel="noopener">
+                ZajaIT
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* MOBILNÍ MENU */
+
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+
+hamburger.addEventListener('click', () => {
+
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+
+});
+
+
+document.querySelectorAll('#nav a').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.classList.remove('menu-open');
+
+    });
+
+});
+
+
+/* KLIKNUTÍ MIMO MENU */
+
+document.addEventListener('click', (e) => {
+
+    if(
+        nav.classList.contains('active') &&
+        !nav.contains(e.target) &&
+        !hamburger.contains(e.target)
+    ){
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+
+});
+
+
+/* ROK */
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
